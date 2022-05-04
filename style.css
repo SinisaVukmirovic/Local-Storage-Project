@@ -5,6 +5,16 @@
   font-family: sans-serif;
 }
 
+body {
+	background-color: #222;
+	color: #eee;
+	padding-top: 3rem;
+}
+
+h1 {
+	text-align: center;
+}
+
 main {
   width: 60%;
   margin: 15px auto 0;
