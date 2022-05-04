@@ -5,16 +5,16 @@ const nameInput = studentForm['name'];
 const ageInput = studentForm['age'];
 const roleInput = studentForm['role'];
 
-const students = [
-    {
-        name: 'John',
-        age: 32,
-        role: 'Mathematics'
-    }
-];
+const students = [];
 
-const addStudent = (name, age, input) => {
+const addStudent = (name, age, role) => {
+    students.push(
+        name,
+        age,
+        role
+    );
 
+    return { name, age, role }
 }
 
 const createStudentElem = ({ name, age, role }) => {
@@ -37,4 +37,20 @@ const createStudentElem = ({ name, age, role }) => {
 
 students.forEach(student => {
     createStudentElem(student);
+});
+
+studentForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const newStudent = addStudent(
+        nameInput.value,
+        ageInput.value,
+        roleInput.value
+    );
+
+    createStudentElem(newStudent);
+
+    nameInput.value = '';
+    ageInput.value = '';
+    roleInput.value = '';
 });
