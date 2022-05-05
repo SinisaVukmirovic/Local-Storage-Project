@@ -33,9 +33,13 @@ const createStudentElem = ({ name, age, role }) => {
     studentRole.innerText = `Student role: ${role}`;
 
     // adding to the DOM
-    studentDiv.append(studentName, studentAge, studentRole)
-    studentsContainer.appendChild(studentDiv)
+    studentDiv.append(studentName, studentAge, studentRole);
+    studentsContainer.appendChild(studentDiv);
+
+    studentsContainer.style.display = students.lenght === 0 ? "none" : "flex";
 }
+
+studentsContainer.style.display = students.lenght === 0 ? "none" : "flex";
 
 students.forEach(student => {
     createStudentElem(student);
