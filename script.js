@@ -5,14 +5,16 @@ const nameInput = studentForm['name'];
 const ageInput = studentForm['age'];
 const roleInput = studentForm['role'];
 
-const students = [];
+const students = JSON.parse(localStorage.getItem('students')) || [];
 
 const addStudent = (name, age, role) => {
-    students.push(
+    students.push({
         name,
         age,
         role
-    );
+    });
+
+    localStorage.setItem('students', JSON.stringify(students));
 
     return { name, age, role }
 }
