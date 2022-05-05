@@ -50,7 +50,8 @@ studentForm.addEventListener('submit', (e) => {
 
     createStudentElem(newStudent);
 
-    nameInput.value = '';
-    ageInput.value = '';
-    roleInput.value = '';
+    // nameInput.value = '';
+    // ageInput.value = '';
+    // roleInput.value = '';
+    studentForm.reset();
 });
