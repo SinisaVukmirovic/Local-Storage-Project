@@ -91,6 +91,10 @@ main {
   width: 100%;
   padding: 10px;
   text-align: center;
+  /* margin: .5rem; */
+}
+.students div:not(:last-child) {
+  border-bottom: 2px solid #367bfa;
 }
 
 .students div * {

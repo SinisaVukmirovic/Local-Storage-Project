@@ -36,10 +36,10 @@ const createStudentElem = ({ name, age, role }) => {
     studentDiv.append(studentName, studentAge, studentRole);
     studentsContainer.appendChild(studentDiv);
 
-    studentsContainer.style.display = students.lenght === 0 ? "none" : "flex";
+    studentsContainer.style.display = students.length === 0 ? "none" : "flex";
 }
 
-studentsContainer.style.display = students.lenght === 0 ? "none" : "flex";
+studentsContainer.style.display = students.length === 0 ? "none" : "flex";
 
 students.forEach(student => {
     createStudentElem(student);
